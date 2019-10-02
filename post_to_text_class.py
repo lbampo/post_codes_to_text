@@ -7,3 +7,12 @@ def get_post_json(p_code):
 
     return req_json
 
+def open_read_file(file, post_item):
+    try:
+        opened_file = open(file, 'a')
+        opened_file.write(post_item)
+
+    except FileNotFoundError:
+        print("File not found")
+
+        
